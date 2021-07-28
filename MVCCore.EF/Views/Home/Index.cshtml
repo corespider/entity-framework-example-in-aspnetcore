@@ -1,0 +1,25 @@
+﻿@using MVCCore.EF.Models
+@model IEnumerable<States>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h4>State List</h4>
+    <hr />
+    <table class="table table-bordered">
+        <tr>
+            <th>State ID</th>
+            <th>State Name</th>
+            <th>State Abbreviation</th>
+        </tr>
+        @foreach (States state in Model)
+        {
+            <tr>
+                <td>@state.stateID</td>
+                <td>@state.stateName</td>
+                <td>@state.stateAbbrev</td>
+            </tr>
+        }
+    </table>
+</div>
